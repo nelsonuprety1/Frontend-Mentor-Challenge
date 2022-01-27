@@ -5,6 +5,117 @@
 }
 
 
+:root {
+    --color-primary: hsl(179, 61%, 44%);
+    --color-second: hsl(71, 73%, 54%);
+    --color-subtext: hsl(204, 43%, 93%);
+    --color-text: hsl(218, 22%, 67%);
+    --color-box: hsl(179, 47%, 52%);
+
+}
+
+body {
+    font-family: 'Karla';
+    background-color: var(--color-subtext);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    min-width: 350px;
+    margin: 50px auto;
+}
+
+.container>.header {
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    line-height: 2;
+    font-weight: 400;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.paragraph-1 {
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+
+h2 {
+    font-size: 1em;
+    color: var(--color-second);
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.subscription {
+    background-color: var(--color-primary);
+    color: white;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.dollar {
+    font-size: 2em;
+    font-weight: 400;
+    padding-right: 10px;
+}
+
+.month {
+    font-size: 1em;
+    opacity: 0.5;
+}
+
+p {
+    padding-bottom: 20px;
+}
+
+.btn-primary {
+    font-size: 1em;
+    font-weight: 700;
+    width: 85%;
+    margin-bottom: 15px;
+    padding-block: min(3vh, 1em);
+    background-color: var(--color-second);
+    color: white;
+    border: 1px solid var(--color-second);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h4 {
+    font-weight: 400;
+    color: white;
+    padding-left: 30px;
+}
+
+.description {
+    background-color: var(--color-box);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-top: 0.1px;
+}
+
+.desc-2 {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.desc-2>li {
+    color: white;
+    opacity: 0.7;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
 
 .attribution {
     font-size: 11px;
@@ -13,4 +124,24 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 50%;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    .subscription {
+        border-bottom-left-radius: 12px;
+
+    }
+
+    .description {
+        border-bottom-left-radius: 0px;
+    }
 }
